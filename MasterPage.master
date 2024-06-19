@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>ガチャガチャ</title>
+    <link rel="stylesheet" href="./Content/StyleSheet.css" />
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <nav class="mask">
+        <header id="header">
+            <h2>ペットショップ</h2>
+        </header>
+        <ul class="list">
+            <li><a href="Default">ホームページ</a></li>
+            <li><a href="CharacterManagement">キャラクター一覧</a></li>
+            <li><a href="#">プロフィール</a></li>
+            <li><a href="RarityManagement">レアリティ管理</a></li>
+        </ul>
+        <ul class="list" style="position: absolute; right: 0px; transform: translate(-50%, 0)">
+            <li><a href="Login">ログイン</a></li>
+        </ul>
+    </nav>
+    <div class="content-wrapper">
+        <form id="MainForm" runat="server">
+            <div class="table-wrapper">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </div>
+    <footer id="footer">
+        Copyright Krazezt!
+    </footer>
+</body>
+</html>
